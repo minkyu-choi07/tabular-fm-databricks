@@ -1,7 +1,4 @@
-# TabICL (soda-inria) vendor dependencies — self-hosted weights, runs locally on GPU.
-# STUB — verify versions during implementation. See README.md.
-tabicl
-# tabicl[forecast]   # uncomment if implementing time-series forecasting
+tabicl==2.1.1
 scikit-learn>=1.3.0
 pandas>=2.0.0
 numpy>=1.24.0
