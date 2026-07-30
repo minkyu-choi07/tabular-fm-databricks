@@ -1,0 +1,10 @@
+# TabFM (Google) vendor dependencies — self-hosted weights, runs locally on GPU.
+#
+# NOTE: TabFM is released under a NON-COMMERCIAL license. See README.md before use.
+# Model weights are downloaded from Hugging Face (google/tabfm-1.0.0-pytorch) on first run.
+tabfm[pytorch]
+scikit-learn>=1.3.0
+pandas>=2.0.0
+numpy>=1.24.0
+mlflow>=2.10.0
+matplotlib>=3.7.0
