@@ -8,10 +8,16 @@ rows are passed as context, no gradient training).
 
 ## ⚠️ License — non-commercial
 
-TabFM is released under a **non-commercial license**. Use in this repository is for
-**evaluation and comparison only**. Do **not** use TabFM in a commercial/production
-setting without checking Google's license terms. This is the key difference from the
-other vendors and should be surfaced to any customer evaluating it.
+The TabFM **model weights** are released under the **TabFM Non-Commercial License v1.0**
+(Hugging Face license id `tabfm-non-commercial-v1.0`). Use in this repository is for
+**evaluation and comparison only** — the license restricts the weights to
+non-commercial, non-production use (testing / evaluation / academic research).
+**Commercial or production use requires a separate commercial license from Google.**
+Note the source code at [`google-research/tabfm`](https://github.com/google-research/tabfm)
+is Apache-2.0, but the *weights* (what these notebooks download and run) are not — the
+non-commercial terms are what apply here. This is the key difference from the other
+vendors and must be surfaced to any customer evaluating it. See the full license on the
+[model card](https://huggingface.co/google/tabfm-1.0.0-pytorch/blob/main/LICENSE).
 
 ## At a glance
 
@@ -21,7 +27,7 @@ other vendors and should be surfaced to any customer evaluating it.
 | **Compute on Databricks** | **GPU cluster recommended** (CPU works but is slow). Inline in the notebook (v1). |
 | **Auth** | None for open weights; standard Hugging Face access to download the model |
 | **Tasks covered** | **Classification and Regression only** — no outlier detection or forecasting |
-| **License** | **Non-commercial** ⚠️ |
+| **License** | Weights: **TabFM Non-Commercial License v1.0** ⚠️ (source code is Apache-2.0) |
 | **Data limits** | Benchmarked ~700–150k samples; ≤10 classes for classification |
 
 > A managed **BigQuery `AI.PREDICT`** path for TabFM was announced by Google but is
