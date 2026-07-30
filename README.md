@@ -9,10 +9,10 @@ Databricks. Tabular foundation models are pretrained models that make accurate p
 on tabular data with little-to-no task-specific training — eliminating much of the model
 training, hyperparameter tuning, and per-use-case maintenance overhead of traditional ML.
 
-> **Multi-vendor scope.** This repository is intended to host examples across multiple
-> tabular foundation model vendors. The current notebooks use
-> [**TabPFN**](https://docs.priorlabs.ai/) (Prior Labs) as the first vendor; support for
-> additional TFM vendors will be added over time. See [Adding a vendor](#adding-a-vendor).
+> **Multi-vendor scope.** This repository hosts examples across multiple tabular
+> foundation model vendors behind a shared evaluation harness. See
+> [Supported vendors](#supported-vendors) for what's included, or
+> [Adding a vendor](#adding-a-vendor) to contribute another.
 
 ## Overview
 
@@ -51,7 +51,7 @@ customers — substantial, costly operational overhead.
 |--------|-------------|-----------------------|-------|---------|--------|
 | **[TabPFN](vendors/tabpfn/)** (Prior Labs) | Hosted API (thin client) | Serverless **CPU** | Classification · Regression · Outlier · Forecasting | `tabpfn-client` Apache-2.0; hosted model per Prior Labs terms | ✅ Available |
 | **[TabFM](vendors/tabfm/)** (Google) | Self-hosted weights (HF) | **GPU** (inline) | Classification · Regression | ⚠️ Weights **TabFM Non-Commercial License v1.0** (code Apache-2.0) | ✅ Available |
-| **[TabICL](vendors/tabicl/)** (soda-inria) | Self-hosted weights (HF) | **GPU** (inline) | Classification · Regression | **BSD 3-Clause** | 🚧 Placeholder |
+| **[TabICL](vendors/tabicl/)** (soda-inria) | Self-hosted weights (HF) | **GPU** (inline) | Classification · Regression | **BSD 3-Clause** | ✅ Available |
 
 Each vendor lives in `vendors/<vendor>/` with its own README (setup, auth, license,
 compute), `requirements.txt`, and task notebooks. Pick the folder for the vendor you
@@ -74,7 +74,7 @@ tabular-fm-databricks/
 ├── vendors/
 │   ├── tabpfn/    (README + requirements + notebooks 01–04)
 │   ├── tabfm/     (README + requirements + notebooks 01–02)
-│   └── tabicl/    (README placeholder for contributor)
+│   └── tabicl/    (README + requirements + notebooks 01–02)
 ├── databricks.yml                        # Databricks Asset Bundle configuration
 ├── requirements.txt                      # Base/shared dependencies
 ├── CONTRIBUTING.md · LICENSE.md · NOTICE.md · SECURITY.md
