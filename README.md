@@ -49,7 +49,7 @@ customers — substantial, costly operational overhead.
 
 | Vendor | Consumption | Compute on Databricks | Tasks | License | Status |
 |--------|-------------|-----------------------|-------|---------|--------|
-| **[TabPFN](vendors/tabpfn/)** (Prior Labs) | Hosted API (thin client) | Serverless **CPU** | Classification · Regression · Outlier · Forecasting | ⚠️ Weights **TABPFN-3 Non-Commercial** (Code Prior Labs License; API is commercial) | ✅ Available |
+| **[TabPFN](vendors/tabpfn/)** (Prior Labs) | Hosted API & Self-hosted weights | Serverless **CPU** | Classification · Regression · Outlier · Forecasting | ⚠️ Weights **TABPFN-3 Non-Commercial** (Code Prior Labs License; API is commercial) | ✅ Available |
 | **[TabFM](vendors/tabfm/)** (Google) | Self-hosted weights (HF) | **GPU** (inline) | Classification · Regression | ⚠️ Weights **TabFM Non-Commercial License v1.0** (code Apache-2.0) | ✅ Available |
 | **[TabICL](vendors/tabicl/)** (soda-inria) | Self-hosted weights (HF) | **GPU** (inline) | Classification · Regression | **BSD 3-Clause** | ✅ Available |
 
