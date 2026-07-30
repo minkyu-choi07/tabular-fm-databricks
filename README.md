@@ -49,9 +49,9 @@ customers — substantial, costly operational overhead.
 
 | Vendor | Consumption | Compute on Databricks | Tasks | License | Status |
 |--------|-------------|-----------------------|-------|---------|--------|
-| **[TabPFN](vendors/tabpfn/)** (Prior Labs) | Hosted API (thin client) | Serverless **CPU** | Classification · Regression · Outlier · Forecasting | Commercial OK | ✅ Available |
-| **[TabFM](vendors/tabfm/)** (Google) | Self-hosted weights (HF) | **GPU** (inline) | Classification · Regression | ⚠️ **Non-commercial** | ✅ Available |
-| **[TabICL](vendors/tabicl/)** (soda-inria) | Self-hosted weights (HF) | **GPU** (inline) | Classification · Regression | Open (verify) | 🚧 Placeholder |
+| **[TabPFN](vendors/tabpfn/)** (Prior Labs) | Hosted API (thin client) | Serverless **CPU** | Classification · Regression · Outlier · Forecasting | `tabpfn-client` Apache-2.0; hosted model per Prior Labs terms | ✅ Available |
+| **[TabFM](vendors/tabfm/)** (Google) | Self-hosted weights (HF) | **GPU** (inline) | Classification · Regression | ⚠️ Weights **TabFM Non-Commercial License v1.0** (code Apache-2.0) | ✅ Available |
+| **[TabICL](vendors/tabicl/)** (soda-inria) | Self-hosted weights (HF) | **GPU** (inline) | Classification · Regression | **BSD 3-Clause** | 🚧 Placeholder |
 
 Each vendor lives in `vendors/<vendor>/` with its own README (setup, auth, license,
 compute), `requirements.txt`, and task notebooks. Pick the folder for the vendor you

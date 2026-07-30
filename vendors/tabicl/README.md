@@ -21,7 +21,7 @@ locally. It notably scales to **million-row datasets under 50GB GPU memory**.
 | **Compute on Databricks** | **GPU cluster** (scales to very large datasets); inline in the notebook (v1) |
 | **Auth** | None; downloads checkpoint from Hugging Face on first use |
 | **Tasks covered** | Classification and Regression (see below re: forecast/shap extras) |
-| **License** | Open — inference code + weights released (confirm exact license) |
+| **License** | **BSD 3-Clause** (`soda-inria/tabicl`); bundles Prior Labs-derived code under Apache-2.0 in `src/tabicl/forecast` |
 | **Data limits** | Trained 300–100k samples / 2–100 features; generalizes to 600k+ rows |
 
 Native API (sklearn-style, single-step):
