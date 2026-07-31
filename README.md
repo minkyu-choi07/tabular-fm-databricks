@@ -105,7 +105,7 @@ notebook reads them back.
 Depends on the vendor: **TabPFN** runs on **Serverless CPU** (it's a hosted API);
 **TabFM** and **TabICL** are self-hosted and need a **GPU cluster**. Because every vendor
 writes to the same results table, you can run them on different clusters and still
-compare them afterward.
+compare them afterward. For **TabICL** there is an example on how to serve the model through a GPU serving endpoint, which allows to run the pipelines on CPU and offload the inference to the dedicated GPU serving endpoint. 
 
 ## Adding a vendor
 
