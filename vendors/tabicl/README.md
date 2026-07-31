@@ -43,6 +43,7 @@ under Apache-2.0 in `src/tabicl/forecast`.)
 |----------|------|
 | `notebooks/01_classification.ipynb` | Binary & multi-class classification |
 | `notebooks/02_regression.ipynb` | Regression |
+| `notebooks/03_inference_on_serving_endpoint.ipynb` | Serve the model through a GPU serving endpoint invoked from a notebook with CPU only|
 
 Native API (sklearn-style, single-step):
 ```python
