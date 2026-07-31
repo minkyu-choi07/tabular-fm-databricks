@@ -71,6 +71,7 @@ tabular-fm-databricks/
 │       └── cleanup.sh                    # Resource cleanup
 ├── common/
 │   └── evaluation.py                     # Shared split, metrics, baselines, results logging
+│   └── config.py                         # Configuration file to adapt to your Unity Catalog structure
 ├── vendors/
 │   ├── tabpfn/    (README + requirements + notebooks 01–04)
 │   ├── tabfm/     (README + requirements + notebooks 01–02)
@@ -95,7 +96,7 @@ notebook reads them back.
 
 ## Getting Started
 
-1. **Generate the shared data** — run [`shared/notebooks/00_data_preparation.ipynb`](shared/notebooks/00_data_preparation.ipynb). This creates the Delta tables all vendors use.
+1. **Generate the shared data** — run [`shared/notebooks/00_data_preparation.ipynb`](shared/notebooks/00_data_preparation.ipynb). This creates the Delta tables all vendors use. Make sure to update [`common/config.py`](common/config.py) with your catalog configuration.
 2. **Pick a vendor** — open `vendors/<vendor>/` and follow its README for setup, then run its `01`/`02`… notebooks.
 3. **Compare** (optional) — after running one or more vendors, run [`shared/notebooks/05_vendor_comparison.ipynb`](shared/notebooks/05_vendor_comparison.ipynb) for a side-by-side ranking against the shared baselines.
 
