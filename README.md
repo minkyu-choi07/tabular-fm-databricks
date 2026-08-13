@@ -52,6 +52,7 @@ customers — substantial, costly operational overhead.
 | **[TabPFN](vendors/tabpfn/)** (Prior Labs) | Hosted API & Self-hosted weights | Serverless **CPU** | Classification · Regression · Outlier · Forecasting | ⚠️ Weights **TABPFN-3 Non-Commercial** (Code Prior Labs License; API is commercial) | ✅ Available |
 | **[TabFM](vendors/tabfm/)** (Google) | Self-hosted weights (HF) | **GPU** (inline) | Classification · Regression | ⚠️ Weights **TabFM Non-Commercial License v1.0** (code Apache-2.0) | ✅ Available |
 | **[TabICL](vendors/tabicl/)** (soda-inria) | Self-hosted weights (HF) | **GPU** (inline) | Classification · Regression | **BSD 3-Clause** | ✅ Available |
+| **[Nori](vendors/nori/)** (Synthefy) | Self-hosted weights (HF) | **GPU** recommended; CPU supported | Regression | **Apache-2.0** (code and weights) | ✅ Available |
 
 Each vendor lives in `vendors/<vendor>/` with its own README (setup, auth, license,
 compute), `requirements.txt`, and task notebooks. Pick the folder for the vendor you
@@ -75,7 +76,8 @@ tabular-fm-databricks/
 ├── vendors/
 │   ├── tabpfn/    (README + requirements + notebooks 01–04)
 │   ├── tabfm/     (README + requirements + notebooks 01–02)
-│   └── tabicl/    (README + requirements + notebooks 01–02)
+│   ├── tabicl/    (README + requirements + notebooks 01–02)
+│   └── nori/      (README + requirements + regression notebook 02)
 ├── databricks.yml                        # Databricks Asset Bundle configuration
 ├── requirements.txt                      # Base/shared dependencies
 ├── CONTRIBUTING.md · LICENSE.md · NOTICE.md · SECURITY.md
@@ -91,7 +93,7 @@ notebook reads them back.
 ## Prerequisites
 
 1. **Databricks Workspace** with Unity Catalog enabled
-2. For a given vendor: its credentials/compute (see the vendor's README — e.g. TabPFN needs an API token; TabFM/TabICL need a GPU cluster)
+2. For a given vendor: its credentials/compute (see the vendor's README — e.g. TabPFN needs an API token; TabFM/TabICL need a GPU cluster, while Nori recommends one)
 3. **Databricks CLI** (optional, for local development)
 
 ## Getting Started
@@ -103,9 +105,12 @@ notebook reads them back.
 ## Compute Requirements
 
 Depends on the vendor: **TabPFN** runs on **Serverless CPU** (it's a hosted API);
-**TabFM** and **TabICL** are self-hosted and need a **GPU cluster**. Because every vendor
-writes to the same results table, you can run them on different clusters and still
-compare them afterward. For **TabICL** there is an example on how to serve the model through a GPU serving endpoint, which allows to run the pipelines on CPU and offload the inference to the dedicated GPU serving endpoint. 
+**TabFM** and **TabICL** are self-hosted and need a **GPU cluster**; **Nori** is
+self-hosted, recommends a GPU, and also supports CPU inference for smaller tables.
+Because every vendor writes to the same results table, you can run them on different
+clusters and still compare them afterward. For **TabICL** there is an example on how
+to serve the model through a GPU serving endpoint, which allows pipelines to run on
+CPU and offload inference to the dedicated GPU serving endpoint.
 
 ## Adding a vendor
 

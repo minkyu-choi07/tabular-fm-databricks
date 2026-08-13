@@ -27,4 +27,10 @@ not redistributed in this repository.
   (**BSD 3-Clause License**, https://github.com/soda-inria/tabicl). The repository bundles
   Prior Labs-derived code under Apache License 2.0 in `src/tabicl/forecast`.
 
+- **Nori** (Synthefy) — self-hosted weights from Hugging Face (`Synthefy/Nori`)
+  via the `synthefy-nori` package. The code and model weights are released under
+  the **Apache License 2.0**. See https://github.com/Synthefy/synthefy-nori and
+  https://huggingface.co/Synthefy/Nori. The package carries its own `NOTICE` and
+  third-party attribution files.
+
 Trademarks are the property of their respective owners.
