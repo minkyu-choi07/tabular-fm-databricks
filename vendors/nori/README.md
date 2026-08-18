@@ -23,7 +23,7 @@ its own `NOTICE` and third-party attribution files.
 | **Auth** | None; the public checkpoint downloads on first prediction |
 | **Tasks covered** | **Regression** with point estimates and prediction intervals |
 | **License** | **Apache License 2.0** (code and weights), commercial use permitted |
-| **Model variants** | `nori` (base, approximately 6M parameters) and `nori-30m` (larger, stronger variant) |
+| **Model variants** | `nori-6m` (base, approximately 6M parameters) and `nori-30m` (larger, stronger variant) |
 | **Intended scale** | Small-to-medium tabular regression; context-cache memory grows with the number of rows |
 
 ## Setup
@@ -48,7 +48,7 @@ from synthefy_nori import NoriRegressor
 
 # text_columns=[] enables Nori's numeric + categorical DataFrame preprocessing;
 # it does not load a text-embedding model.
-reg = NoriRegressor(model="nori", text_columns=[])
+reg = NoriRegressor(model="nori-6m", text_columns=[])
 reg.fit(X_train, y_train)  # stores context; no gradient training
 y_pred = reg.predict(X_test)
 q10, q90 = reg.predict(

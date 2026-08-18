@@ -1,6 +1,9 @@
 # Nori (Synthefy) vendor dependencies. The model is self-hosted and uses a GPU
 # automatically when one is available; CPU is supported for smaller tables.
-synthefy-nori==0.17.1
+synthefy-nori==0.18.1
+# Keep the public SDK in lockstep with the tested Nori release. In particular,
+# synthefy-nori 0.17.1 was incompatible with synthefy 7.0.2 at import time.
+synthefy==7.0.2
 scikit-learn>=1.4.0
 pandas>=2.0.0
 numpy>=2.0.0
